@@ -1,0 +1,37 @@
+// Guess what answers you would get if you ran this in the Javascript Console.
+//Once you have an answer to the questions then check them by copying them and running it in the console yourself line by line 
+
+
+//Evaluate the below:
+something! //
+3 + "65" 
+7 - "3" 
+15 % 5 
+5 % 15
+"Java" + "Script" 
+"Java" - "Script" 
+" " + " " 
+" " + 0 
+true + true 
+true + false 
+false + true 
+false - true 
+3 - 4 
+
+
+//Evaluate the below comparisons:
+4 >= 2 
+6 === 2
+3 <= 1 
+1 != 1 
+"A" > "B" 
+"B" < "C" 
+"a" > "A" 
+"b" < "A" 
+true === false 
+true != true 
+
+
+// Make the string: 
+// "Go To Helsinki Business College," they said. "It'll Will Be "Fun"," they said.
+// by using the + sign:
