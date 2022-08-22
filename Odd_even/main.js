@@ -1,15 +1,14 @@
-function checknum() {
-    let num = window.prompt("Give a number!");
+const checknum = () => {
+    const num = Number.parseInt(prompt("Give a number!"), 10)
 
-    if (num > 0) {
-        return console.log("It is positive");
-    }  
-    
-    if (num % 2 == 0) {
-        return console.log(num + " is an even number");
-    } else {
-        return console.log( num + " is an odd number");
+    if (num >= 0 ) {
+        if (num % 2 == 0) {
+            return console.log(`${num} is an even number`);
+        } else {
+            return console.log(`${num} is an odd number`);
+        }
+    }  else {
+        return console.log(`${num} is a negative number`);
     }
-};
-
-checknum()
+}
+checknum ();

@@ -1,18 +1,22 @@
-function randoming() {
-    const a = Number(prompt("Give the first number!"));
-    const b = Number(prompt("Give the second number!"));
-    const c = Number(prompt("Give the third number!"));
+const randoming= () => {
+    const a = Number.parseInt(prompt("Give the first number!"), 10);
+    const b = Number.parseInt(prompt("Give the second number!"), 10);
+    const c = Number.parseInt(prompt("Give the third number!"), 10);
+
+    let sum, mult;
 
     if (a >= 0 && b >= 0 && c >= 0) {
-        return console.log( "The product is " + a * b * c);
-    } else if (a < 0, b < 0, c < 0 ) {
-        return console.log("Only negatives numbers were given");
-    } else if (a > 0, b > 0, c < 0) {
-        return console.log("The sum is " + a + b + c);
-    } else if (a > 0, b < 0, c > 0) {
-        return console.log("The sum is " + a + b + c);
-    } else if (a < 0, b > 0, c > 0) {
-        return console.log("The sum is " + a + b + c);
+        mult = a * b * c
+        sum = a + b + c
+        return console.log(`The sum is ${sum} and the product is ${mult}`);
+    } else if (a <= 0 || b <= 0 || c <= 0 ) {
+        if (a <=0 && b <=0 && c <=0) {
+            return console.log("Only negative numbers were given");
+        } else {
+            sum = a + b + c;
+            return console.log (`The sum is ${sum}`);
+        }
+        
     } 
 };
 
