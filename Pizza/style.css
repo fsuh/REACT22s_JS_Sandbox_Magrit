@@ -1,35 +1,91 @@
-body{
+* {
     margin: 0;
     padding: 0;
-    background: salmon;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-}
-
-h1{
-    text-align: center;
 
 }
 
-p{
-    font-weight: bold;
-
+html{
+    font-size: 14px;
 }
+
+body{
+    background: url("./secondPizza.jpg") no-repeat fixed center center/cover;
+}
+
 .container{
-    height: 100vh;
-    margin: 5% 10%;
+    width: 50vw;
+    height: 90vh;
+    opacity: 0.8;
     padding: 16px;
     display: inline-block;
     background-color: lightgoldenrodyellow;
     border-radius: 5px;
+    margin: 0 20rem 0 20rem;
 
+}
+
+div.container img {
+    margin: 0rem;
+    padding: 0;
+}
+
+div.container h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0;
+} 
+
+div.pizzaSizes h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem 0 0;
+} 
+
+div.pizzaSizes p {
+    font-size: 10px;
+    margin: 0;
+    color: lightslategrey;
+    padding-left: 10px;
+} 
+
+div.toppings h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+} 
+
+div.toppings p {
+    font-size: 10px;
+    margin: 0;
+    color: lightslategrey;
+    padding-left: 10px;
+} 
+
+div.delivery label{
+    font-size: 20px;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.customer label{
+    font-size: 20px;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    margin: 0 0 1rem;
+}
+
+p{
+    font-weight: bold;
 }
 
 /* full-width inputs */
 input[type=text]{
     width: 90%;
-    padding: 15px;
-    margin: 5px 0 5px 0;
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
     display: inline-block;
 }
 
@@ -55,25 +111,25 @@ select{
 }
 label{
     display: inline-block;
-    padding: 12px;
+    padding: 1rem;
 }
 
 .customer {
     float: left;
     width: 100%;
-    margin-top: 6px;
+    margin-top: 0.5rem;
 }
 
 .sizes {
     float: left;
     width: 100%;
-    margin-top: 6px;
+    margin-top: 0.5rem;
 }
 
 .toppings {
     float: right;
     width: 100%;
-    margin-top: 6px;
+    margin-top: 1rem;
 
 }
 .size p

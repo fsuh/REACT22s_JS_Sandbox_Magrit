@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>Insurance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Insurance Policy Calculator</h1>
+    <p>Please complete the application form</p>
+    <div class="container">
+        <form>
+            <div>
+                <h2>Name</h2>
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your" />
+            </div>
+            <div>
+                <h2>How old are you (years):</h2>
+                <input type="number" id="age" name="age"/>
+            </div>
+            <div>
+                <h2>Previous and current Medical History</h2>
+                <label for="medic1">
+                    <input type="checkbox" id="medic1" value="hypertension" />Hypertension
+                </label>
+                <label for="medic2">
+                    <input type="checkbox" id="medic2" value="diabetes" />Diabetes
+                </label>
+                <label for="medic3">
+                    <input type="checkbox" id="medic3" value="overweight" />Overweight
+                </label>
+                <label for="medic4">
+                    <input type="checkbox" id="medic4" value="cancer" />Cancer
+                </label>
+            </div>
+            <div>
+                <h2>current Habits</h2>
+                <label for="habit1">
+                    <input type="checkbox" id="habit1" value="smoking" />Smoking
+                </label>
+                <label for="habit2">
+                    <input type="checkbox" id="habit2" value="alcohol" />Alcohol Consumption
+                </label>
+                <label for="habit3">
+                    <input type="checkbox" id="habit3" value="excercise" />Daily Excercising
+                </label>
+                <label for="habit4">
+                    <input type="checkbox" id="habit4" value="drugs" />Consumption of recreational Drugs
+                </label>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="results"></p>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
