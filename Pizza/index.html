@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>FuhSuh Pizza Service</h1>
+            <p>Please complete the form to place your order</p>
+            <div class="customer">
+                <label for="customerName">Name</label>
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name">
+            </div>
+            <div class="pizzaSizes">
+                <p>Choose your required pizza size</p>
+                <label>
+                    <input type="radio" id="pizzaSize2" name="pizzaSize2" checked /> For 2, the price is 7,50€
+                </label>
+                <label>
+                    <input type="radio" id="pizzaSize4" name="pizzaSize4"/> For 4, the price is 10,50€
+                </label>
+                <label>
+                    <input type="radio" id="pizzaSize6" name="pizzaSize6"/> For 6, the price is 12,50€
+                </label>
+                <label>
+                    <input type="radio" id="pizzaSize8" name="pizzaSize8"/> For 6, the price is 12,50€
+                </label>
+            </div>
+            <div class="toppings">
+                <p>Select your topping preference</p>
+                <label>
+                    <input type="checkbox" id="top1" name="top1">
+                    Pepperoni
+                </label>
+                <label>
+                    <input type="checkbox" id="top2" name="top2">
+                    Sausage
+                </label>
+                <label>
+                    <input type="checkbox" id="top3" name="top3">
+                    Mushrooms
+                </label>
+                <label>
+                    <input type="checkbox" id="top4" name="top4">
+                    Bacon
+                </label>
+                <label>
+                    <input type="checkbox" id="top5" name="top5">
+                    Onions
+                </label>
+                <label>
+                    <input type="checkbox" id="top6" name="top6">
+                    Extra Cheese
+                </label>
+                <label>
+                    <input type="checkbox" id="top7" name="top7">
+                    Pineapple
+                </label>
+                <label>
+                    <input type="checkbox" id="top8" name="top8">
+                    Peppers
+                </label>
+                <label>
+                    <input type="checkbox" id="top9" name="top9">
+                    Chicken
+                </label>
+                <label>
+                    <input type="checkbox" id="top10" name="top10">
+                    Black Olives
+                </label>
+            </div>
+            <div class="delivery">
+                <label for="means">Select the mode of delivery:</label>
+                <select name="means" id="means">
+                    <option value="home">Deliver to Home</option>
+                    <option value="eatIn">Eat In</option>
+                    <option value="pickUp">Pickup</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <p id="results"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

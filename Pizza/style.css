@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: salmon;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+
+}
+
+p{
+    font-weight: bold;
+
+}
+.container{
+    height: 100vh;
+    margin: 5% 10%;
+    padding: 16px;
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+
+}
+
+/* full-width inputs */
+input[type=text]{
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+}
+
+/* a styling submit button*/
+input[type=submit]{
+    background-color: darkkhaki;
+    width: 30%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    border: none;
+    margin: 10px;
+
+}
+
+select{
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+}
+label{
+    display: inline-block;
+    padding: 12px;
+}
+
+.customer {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.sizes {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.toppings {
+    float: right;
+    width: 100%;
+    margin-top: 6px;
+
+}
+.size p
