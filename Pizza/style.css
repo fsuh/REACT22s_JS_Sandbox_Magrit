@@ -2,104 +2,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-html{
-    font-size: 14px;
 }
 
 body{
-    background: url("./secondPizza.jpg") no-repeat fixed center center/cover;
+    background: url("./firstPizza.jpg") no-repeat fixed center center/cover;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .container{
-    width: 50vw;
-    height: 90vh;
-    opacity: 0.8;
-    padding: 16px;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    width: 33vw;
+    height: 150vh;
+    opacity: 0.9;
+    padding: 2rem;
     background-color: lightgoldenrodyellow;
-    border-radius: 5px;
-    margin: 0 20rem 0 20rem;
+    border-radius: 1rem;
 
 }
 
-div.container img {
-    margin: 0rem;
-    padding: 0;
+h1{
+    text-align: center;
+    
 }
 
-div.container h2 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0;
-} 
+form > h2{
+    text-align: center;
+    color: gray;
+    margin-bottom: 2rem;
+}
 
-div.pizzaSizes h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem 0 0;
-} 
+.customer{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2rem;
+}
 
-div.pizzaSizes p {
-    font-size: 10px;
-    margin: 0;
-    color: lightslategrey;
-    padding-left: 10px;
-} 
-
-div.toppings h2 {
-    font-size: 20px;
-    margin-bottom: 0;
-} 
-
-div.toppings p {
-    font-size: 10px;
-    margin: 0;
-    color: lightslategrey;
-    padding-left: 10px;
-} 
-
-div.delivery label{
-    font-size: 20px;
-    padding-left: 2rem;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+input[type="text"]{
+    width: 100%;
+    padding: 0.5rem;
 }
 
 div.customer label{
-    font-size: 20px;
-    padding-left: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-h1{
-    text-align: center;
-    margin: 0 0 1rem;
+    padding: 0 10px;
 }
 
-p{
+div.container h2 {
+    font-size: 1.5rem;
+} 
+
+.pizzaSizes{
+    margin-bottom: 1rem;
+}
+
+div.pizzaSizes label {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 1rem;
+}
+
+input[type="radio"]{
+    position: relative;
+}
+
+div.pizzaSizes p {
+    font-size: 14px;
+    margin: 0;
+    color: gray;
+    padding-left: 0;
+}
+
+.toppings{
+    margin-bottom: 1rem;
+}
+
+div.toppings label {
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 1rem;
+}
+
+input[type="checkbox"]{
+    position: relative;
+
+}
+
+div.toppings h2 {
+    font-size: 1.5rem;
+} 
+
+div.toppings p {
+    font-size: 14px;
+    margin: 0;
+    color: gray;
+    padding-left: 0;
+} 
+
+.means label{
+    font-size: 1.5rem;
+    padding: 0 10px;
     font-weight: bold;
-}
-
-/* full-width inputs */
-input[type=text]{
-    width: 90%;
-    padding: 0.5rem;
-    margin: 1rem 0 1rem 0;
-    display: inline-block;
-}
-
-/* a styling submit button*/
-input[type=submit]{
-    background-color: darkkhaki;
-    width: 30%;
-    padding: 10px;
-    font-weight: bold;
-    font-size: large;
-    color: white;
-    border: none;
-    margin: 10px;
-
 }
 
 select{
@@ -109,27 +127,33 @@ select{
     border-radius: 4px;
     background-color: white;
 }
+
+input[type=submit]{
+    background-color: darkkhaki;
+    width: 30%;
+    padding: .5rem;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    border: none;
+    margin: 10px 0;
+
+}
+
 label{
-    display: inline-block;
+    padding-bottom: 2rem;
+}
+#order {
+    position: fixed;
+    left: 2rem;
+    border-radius: 10px;
     padding: 1rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: larger;
+    width: 19vw;
 }
 
-.customer {
-    float: left;
-    width: 100%;
-    margin-top: 0.5rem;
+span {
+    color:salmon
 }
-
-.sizes {
-    float: left;
-    width: 100%;
-    margin-top: 0.5rem;
-}
-
-.toppings {
-    float: right;
-    width: 100%;
-    margin-top: 1rem;
-
-}
-.size p

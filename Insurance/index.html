@@ -13,49 +13,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Insurance Policy Calculator</h1>
-    <p>Please complete the application form</p>
+    
     <div class="container">
         <form>
             <div>
+                <h1>Insurance Policy Calculator</h1>
+                <p>Please complete the application form</p>
                 <h2>Name</h2>
-                <input type="text" id="customerName" name="customerName" placeholder="Enter your" />
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" />
             </div>
             <div>
                 <h2>How old are you (years):</h2>
                 <input type="number" id="age" name="age"/>
             </div>
             <div>
-                <h2>Previous and current Medical History</h2>
+                <h2>Select Previous and/or current Medical History:</h2>
                 <label for="medic1">
-                    <input type="checkbox" id="medic1" value="hypertension" />Hypertension
+                    <input type="checkbox" id="medic1" name="medic" value="hypertension" />Hypertension
                 </label>
                 <label for="medic2">
-                    <input type="checkbox" id="medic2" value="diabetes" />Diabetes
+                    <input type="checkbox" id="medic2"
+                    name="medic" value="diabetes" />Diabetes
                 </label>
                 <label for="medic3">
-                    <input type="checkbox" id="medic3" value="overweight" />Overweight
+                    <input type="checkbox" id="medic3" 
+                    name="medic" value="overweight" />Overweight
                 </label>
                 <label for="medic4">
-                    <input type="checkbox" id="medic4" value="cancer" />Cancer
+                    <input type="checkbox" id="medic4"
+                    name="medic" value="cancer" />Cancer
                 </label>
             </div>
             <div>
-                <h2>current Habits</h2>
+                <h2>Select current Habits:</h2>
                 <label for="habit1">
-                    <input type="checkbox" id="habit1" value="smoking" />Smoking
+                    <input type="checkbox" id="habit1"
+                    name="habit" value="smoking" />Smoking
                 </label>
                 <label for="habit2">
-                    <input type="checkbox" id="habit2" value="alcohol" />Alcohol Consumption
+                    <input type="checkbox" id="habit2"
+                    name="habit" value="alcohol" />Alcohol Consumption
                 </label>
                 <label for="habit3">
                     <input type="checkbox" id="habit3" value="excercise" />Daily Excercising
                 </label>
                 <label for="habit4">
-                    <input type="checkbox" id="habit4" value="drugs" />Consumption of recreational Drugs
+                    <input type="checkbox" id="habit4" 
+                    name="habit"
+                    value="drugs" />Consumption of recreational Drugs
                 </label>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Calculate">
         </form>
         <p id="results"></p>
     </div>
