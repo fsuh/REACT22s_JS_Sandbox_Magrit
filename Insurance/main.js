@@ -14,7 +14,7 @@ const calculate = (event) => {
     let habitResult = [];
     let outcome = 0;
 
-    if (customerAgeResult <= 17) {outcome += 500;} 
+    if (customerAgeResult <= 17) {outcome += 500} 
     else if (customerAgeResult >= 18 && customerAgeResult <= 25) {outcome *= 1.1} 
     else if (customerAgeResult >= 26 && customerAgeResult <= 35) {outcome *= 1.3} 
     else if (customerAgeResult >= 36 && customerAgeResult <= 45) {outcome *= 1.6} 
@@ -42,23 +42,23 @@ const calculate = (event) => {
             habitResult.push(habit.value);
         }
     });
-    if(habitResult.includes('excercise') === true){
+    if(habitResult.includes('excercising') === true){
         outcome *= 0.95;
-    } else if (habitResult.length === 1 && habitResult.includes('excercise') === false){
+    } else if (habitResult.length === 1 && habitResult.includes('excercising') === false){
         outcome *= 1.05;
-    } else if (habitResult.length === 2  && habitResult.includes('excercise') === false) {
+    } else if (habitResult.length === 2  && habitResult.includes('excercising') === false) {
         outcome *= 1.1;
-    } else if (habitResult.length === 3  && habitResult.includes('exercise') === false) {
+    } else if (habitResult.length === 3  && habitResult.includes('exercising') === false) {
         outcome *= 1.15;
-    } else if (habitResult.length === 2  && habitResult.includes('excercise') === true) {
+    } else if (habitResult.length === 2  && habitResult.includes('excercising') === true) {
         outcome *= 1.05;
-    } else if (habitResult.length === 3  && habitResult.includes('excercise') === true) {
+    } else if (habitResult.length === 3  && habitResult.includes('excercising') === true) {
         outcome *= 1.1;
-    } else if (habitResult.length === 4  && habitResult.includes('excercise') === true) {
+    } else if (habitResult.length === 4  && habitResult.includes('excercising') === true) {
         outcome *= 1.15;
     }
 
-    results.innerHTML = `Thank you <span>${customerNameResult}</span> for the shared information! Based on your age of <span>${customerAgeResult}</span> years, your medical history of <span>${medicResult.join(',')}</span> and habits of <span>${habitResult.join(',')}</span>, your insurance will cost <span>${outcome}</span>€`
+    results.innerHTML = `Thank you <span>${customerNameResult}</span> for completing the information! Based on your age: <span>${customerAgeResult}</span> years old, and your medical history of <span>${medicResult.join(',')}</span> and habits of <span>${habitResult.join(',')}</span>, your insurance score is <span>${outcome}</span>`
 
     form.reset();
 
