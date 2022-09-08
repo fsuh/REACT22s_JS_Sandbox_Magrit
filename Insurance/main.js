@@ -12,9 +12,9 @@ const calculate = (event) => {
     let customerAgeResult = +customerAge.value;
     let medicResult = [];
     let habitResult = [];
-    let outcome = 0;
+    let outcome = 500;
 
-    if (customerAgeResult <= 17) {outcome += 500} 
+    if (customerAgeResult <= 17) {outcome;} 
     else if (customerAgeResult >= 18 && customerAgeResult <= 25) {outcome *= 1.1} 
     else if (customerAgeResult >= 26 && customerAgeResult <= 35) {outcome *= 1.3} 
     else if (customerAgeResult >= 36 && customerAgeResult <= 45) {outcome *= 1.6} 
@@ -58,8 +58,8 @@ const calculate = (event) => {
         outcome *= 1.15;
     }
 
-    results.innerHTML = `Thank you <span>${customerNameResult}</span> for completing the information! Based on your age: <span>${customerAgeResult}</span> years old, and your medical history of <span>${medicResult.join(',')}</span> and habits of <span>${habitResult.join(',')}</span>, your insurance score is <span>${outcome}</span>`
-
+    results.innerHTML = `Thank you <span>${customerNameResult}</span> for completing the information! Based on your age: <span>${customerAgeResult}</span> years old, and your medical history of <span>${medicResult.join(',')}</span> and habits of <span>${habitResult.join(',')}</span>, your insurance score is <span>${Math.floor(outcome)}</span>`
+console.log(outcome)
     form.reset();
 
     

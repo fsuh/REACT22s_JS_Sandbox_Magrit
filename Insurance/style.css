@@ -16,7 +16,7 @@ body{
     justify-content: flex-start;
    flex-flow: row wrap;
     align-items: center;
-    height: 150vh;
+    height: 120vh;
     width: 34vw;
     background-color: #ffffffad;
     padding: 2rem;
@@ -97,7 +97,8 @@ input[type=submit]:hover{
     width: 20vw;
     box-shadow: 0 0 5px gray;
     border: 1px solid gray;
-    background-color: black;
+    background-color: lightslategray;
+    opacity: 0.8;
 
 }
 
