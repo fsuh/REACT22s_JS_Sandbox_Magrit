@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car_Database</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+    <div class="firstSpace"></div>
+        <form id="search">
+            <h2>Search car by Licence number</h2>
+            <label for="licenceSearch" id="search">Licence number</label>
+                <input type="text" id="licence" name="licence" />
+                <input type="submit" value="Search"/>
+        </form>
+    </header>
+    <div class="secondSpace"></div>
+    <main>
+        <form id="data">
+            <h2>Insert Car data</h2>
+            <label for="licenceData">Licence number</label>
+                <input type="text" id="liData" name="InstData"/>
+            <label for="maker">Car maker</label>
+                <input type="text" id="maker" name="InstData"/>
+            <label for="model">Car model</label>
+                <input type="text" id="model" name="InstData"/>
+            <label for="owner">Car owner</label>
+                <input type="text" id="owner" name="InstData"/>
+            <label for="price">Car price</label>
+                <input type="text" id="price" name="InstData"/>
+            <label for="color">Car color</label>
+                <input type="text" id="color" name="InstData"/>
+            <input type="submit" value="Add car"/>
+            <input type="reset"/>
+        </form>
+        <div class="database">
+            <h2>Cars database</h2>
+        </div>
+    </main>
+    <footer class="thirdSpace"></footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
