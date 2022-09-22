@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Black Ops One', cursive;
+    background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80');
+    background-size: cover;
+    background-color: linear-gradient(to left greenyellow lightgreen);
+    height: 100%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 75vh;
+    max-height: 100%;
+    margin: 50px;
+    box-shadow: 5px 5px 20px white;
+}
+section{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.heading{
+    height: 50px;
+    margin-top: 5px;
+    
+}
+.heading p{
+    padding: 10px;
+
+}
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 5px;
+}
+.circle{
+    border: none;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    text-align: center;
+
+}
+
+.circles .active{
+    background-image: url('/Speedgame/mosquito@2x.png');
+    background-size: cover;
+
+}
+
+.btns{
+    width: 10rem;
+    height: 15rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+/*#end{
+    display: none;
+}*/
+.overlay {
+    display: none;
+}
+.overlay.visible {
+    display: flex;
+}
+/*.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.overlay.visible.modal {
+    position: relative;
+    background: white;
+    min-height: 50vh;
+    width: 50vw;
+    border-radius: 10px;
+    color: #032330;
+    padding: 3rem;
+}
+.overlay.visible.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}*/
