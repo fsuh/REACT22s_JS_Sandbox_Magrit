@@ -4,7 +4,7 @@ const mobButton = document.querySelector('#mob_button');
 const nav = document.querySelector('nav');
 const modButton = document.querySelector('#modal_btn');
 const overlay = document.querySelector('.overlay');
-const closeButton = document.querySelector('#.btn_close');
+const closeButton = document.querySelector('.btn_close');
 let links = document.querySelectorAll('nav ul li a');
 
 
