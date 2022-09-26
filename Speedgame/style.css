@@ -65,16 +65,20 @@ section{
     border-radius: 5px;
     padding: 5px 10px;
 }
-/*#end{
+#end{
     display: none;
-}*/
+}
 .overlay {
     display: none;
 }
 .overlay.visible {
     display: flex;
 }
-/*.overlay{
+.overlay.visible.modal {
+    display: block;
+}
+
+.overlay.visible{
     position: fixed;
     top: 0;
     left: 0;
@@ -86,6 +90,23 @@ section{
     justify-content: center;
     align-self: center;
 }
+/*.modal {
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    min-height: 50vh;
+    min-width: 50vh;
+    padding: 3rem;
+    border-radius: 10px;
+}
+.btn_close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+}*/
 .overlay.visible.modal {
     position: relative;
     background: white;
@@ -95,8 +116,8 @@ section{
     color: #032330;
     padding: 3rem;
 }
-.overlay.visible.close{
+.overlay.visible.btn_close{
     position: absolute;
     top: 20px;
     right: 20px;
-}*/
+}
