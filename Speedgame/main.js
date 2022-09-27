@@ -10,7 +10,7 @@ let active = 0;
 let timer;
 let pace = 1000;
 let rounds = 0;
-
+let flag = false
 // function to generate a non-repeating random number
 const getRndInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -19,6 +19,7 @@ const getRndInt = (min, max) => {
 circles.forEach((circle, i) => {
     circle.addEventListener('click', () => rndomCircle(i));
     
+    
 });
 
 // Generating a function of random active circles
@@ -26,7 +27,7 @@ circles.forEach((circle, i) => {
 const rndomCircle = (i) => {
     if(i !== active) {
         endGame();
-    } else {
+    } else if (flag === true && i === active ){
         count++;
         rounds--;
         score.textContent = count;
@@ -35,10 +36,10 @@ const rndomCircle = (i) => {
    
 }
 
-
 const startGame = () => {
+    flag = true;
     if (rounds >= 3){
-        return endGame
+        return endGame()
     }
 
     let nextActive = pickNew(active);
@@ -46,9 +47,8 @@ const startGame = () => {
     circles[nextActive].classList.toggle('active');
     circles[active].classList.remove('active');
 
-    active = nextActive;
 
-    console.log('current active number is', active);
+    active = nextActive;
 
     timer = setTimeout(startGame, pace);
     pace = pace - 10;
@@ -69,7 +69,7 @@ const startGame = () => {
     
 }
 const endGame = () => {
-    overlay.style.visibility ='visible';
+    overlay.style.display ='block';
     startButton.style.display = 'block';
     endButton.style.display = 'none';
     clearTimeout(timer);
@@ -77,7 +77,9 @@ const endGame = () => {
 };
 
 const resetGame = () => {
+    overlay.style.display ='none';
     window.location.reload();
+    
 }
 
 startButton.addEventListener('click', startGame)
