@@ -1,3 +1,4 @@
+
 const startButton = document.querySelector('#start');
 const endButton = document.querySelector('#end');
 const circles = document.querySelectorAll('.circle');
@@ -8,14 +9,38 @@ const overlay = document.querySelector('.overlay');
 let count = 0;
 let active = 0;
 let timer;
-let pace = 1000;
-let rounds = 0;
-let flag = false
+let pace = 1000; // pace of apperance of mosquitoe
+let rounds = 0; // game lives
+let flag = false; // catching click counts before game begins
+let mySound;
+let myMusic;
+
+
+// new object constructor to handle sound objects
+class sound {
+    constructor(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function () {
+            this.sound.play();
+        };
+        this.stop = function () {
+            this.sound.pause();
+        };
+    }
+}
+
+
 // function to generate a non-repeating random number
 const getRndInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
+// iterating randomly through each circle
 circles.forEach((circle, i) => {
     circle.addEventListener('click', () => rndomCircle(i));
     
@@ -32,15 +57,18 @@ const rndomCircle = (i) => {
         rounds--;
         score.textContent = count;
         finalScore.textContent = count;
+       
     }
    
 }
 
 const startGame = () => {
+    mySound = new sound('/Speedgame/assets/mosquitoe.mp3')
     flag = true;
     if (rounds >= 3){
-        return endGame()
+        return endGame();
     }
+    mySound.play();
 
     let nextActive = pickNew(active);
 
@@ -66,6 +94,7 @@ const startGame = () => {
     }
  startButton.style.display = 'none'
  endButton.style.display = 'block'
+
     
 }
 const endGame = () => {
@@ -78,9 +107,12 @@ const endGame = () => {
 
 const resetGame = () => {
     overlay.style.display ='none';
+    mySound.stop();
     window.location.reload();
     
 }
+
+
 
 startButton.addEventListener('click', startGame)
 endButton.addEventListener('click', endGame)

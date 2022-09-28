@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Black Ops One', cursive;
     background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80');
@@ -11,6 +12,7 @@ body {
     height: 100%;
     color: black;
 }
+
 main{
     display: flex;
     justify-content: center;
@@ -21,6 +23,7 @@ main{
     margin: 50px;
     box-shadow: 0 0 20px #fff, 0 0 40px #c6f3c0, 0 0 80px #c6f3c0;
 }
+
 section{
     flex: 1;
     display: flex;
@@ -28,16 +31,19 @@ section{
     align-items: center;
     flex-flow: column;
 }
+
 .heading{
     height: 50px;
     margin-top: 5px;
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     
 }
+
 .heading p{
     padding: 10px;
 
 }
+
 .circles{
     display: flex;
     justify-content: center;
@@ -46,6 +52,7 @@ section{
     margin-top: 5px;
     height: 50vh;
 }
+
 .circle{
     border: 1px solid black;
     border-radius: 50px;
@@ -57,14 +64,11 @@ section{
     align-items: center;
     cursor: pointer;
     /*pointer-events: none;*/
-
-
 }
 
 .circles .active{
-    background-image: url('/Speedgame/mosquito@2x.png');
+    background-image: url('/Speedgame/assets/mosquito@2x.png');
     background-size: cover;
-
 }
 
 .btns{
@@ -75,6 +79,7 @@ section{
     width: 200px;
     height: 100px;
 }
+
 #end{
     display: none;
 }
@@ -90,6 +95,7 @@ section{
     justify-content: center;
     align-self: center;
 }
+
 .modal {
     position: relative;
     margin: 200px auto;
@@ -103,6 +109,7 @@ section{
     padding: 3rem;
     border-radius: 10px;
 }
+
 .btn_close{
     position: absolute;
     top: 20px;
