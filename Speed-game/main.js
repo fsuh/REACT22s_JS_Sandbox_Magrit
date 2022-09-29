@@ -63,9 +63,10 @@ const rndomCircle = (i) => {
 }
 
 const startGame = () => {
-    mySound = new sound('/Speedgame/assets/mosquitoe.mp3')
+    mySound = new sound('./assets/mosquitoe.mp3')
     flag = true;
     if (rounds >= 3){
+        mySound.stop()
         return endGame();
     }
     mySound.play();
@@ -98,6 +99,7 @@ const startGame = () => {
     
 }
 const endGame = () => {
+    mySound.stop();
     overlay.style.display ='block';
     startButton.style.display = 'block';
     endButton.style.display = 'none';
@@ -107,7 +109,6 @@ const endGame = () => {
 
 const resetGame = () => {
     overlay.style.display ='none';
-    mySound.stop();
     window.location.reload();
     
 }
