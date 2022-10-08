@@ -7,7 +7,7 @@ const owner = document.querySelector('#owner');
 const price =document.querySelector('#price');
 const color = document.querySelector('#color');
 const dataDisplay = document.querySelector('#dataDisplay');
-const table =document.querySelector('#carDatabase')
+
 
 //1.a Storing the car data in an array
 let carData = [];
@@ -55,17 +55,24 @@ const registerCar = (event) => {
         document.querySelector('#color').focus();
         return false;
     } else {
-        const carInfo = new Car(licenseNum, makerNum, modelNum, ownerNum, priceNum, colorNum);
-        carData.push(carInfo)
+               //assign data to class constructor...
+               const car = new Car
+               car.license = licenseNum;car.maker = makerNum; car.model = modelNum; car.owner = ownerNum;
+               car.price = priceNum; car.color = priceNum;
+               carData.push(car);
+            //    data is coming through
+               console.log(carData);
     }
 
     // Inserting the carData into the car database table
     
-    let table = document.createElement('table');
+  
     let headingRow = document.createElement('tr');
     let tableHeadings = ['Licence', 'Maker', 'Model', 'Owner', 'Price', 'Color'];
-
-
+    let table = document.createElement('table');
+    // If array is empty during the initial launch create table
+if (carData.length <=1) {
+   
     tableHeadings.forEach(heading => {
         let headingText = document.createElement('th');
         let textNode = document.createTextNode(heading);
@@ -73,19 +80,40 @@ const registerCar = (event) => {
         headingRow.appendChild(headingText);
     });
     table.appendChild(headingRow);
-
-    carData.forEach(carItem => {
-        let newRow = document.createElement('tr');
-        Object.values(carItem).forEach(property => {
-            let displayCell = document.createElement('td');
-            let textNode = document.createTextNode(property);
-            displayCell.appendChild(textNode);
-            newRow.appendChild(displayCell)
-        });
-        table.appendChild(newRow);
-
-    });
     dataDisplay.appendChild(table);
+}
+// table now in html now add a row and data every time submit button is clicked
+const table2 =document.querySelector('table')
+
+    let rows = table2.insertRow();
+    let cell1 = rows.insertCell();
+    let cell2 = rows.insertCell();
+    let cell3 = rows.insertCell();
+    let cell4 = rows.insertCell();
+    let cell5 = rows.insertCell();
+    let cell6 = rows.insertCell();
+    cell1.innerHTML = licenseNum;
+    cell2.innerHTML = makerNum;
+    cell3.innerHTML = modelNum;
+    cell4.innerHTML = ownerNum;
+    cell5.innerHTML = priceNum;
+    cell6.innerHTML = priceNum;
+
+
+    // i had to replace the loop because it was using an array and to do so you have to clear the table and then reset the row then recreate them. first 
+    // before allocating values from the loop
+    // carData.forEach(carItem => {
+    //     let newRow = document.createElement('tr');
+    //     Object.values(carItem).forEach(property => {
+    //         let displayCell = document.createElement('td');
+    //         let textNode = document.createTextNode(property);
+    //         displayCell.appendChild(textNode);
+    //         newRow.appendChild(displayCell)
+    //     });
+    //     table.appendChild(newRow);
+
+    // });
+   
 
     /*dataDisplay.innerHTML = ' <table id="carDatabase"><thead><th>Licence</th><th>Maker</th><th>Model</th><th>Owner</th><th>Price</th><th>Color</th></thead><tbody></tbody></table>'
  
