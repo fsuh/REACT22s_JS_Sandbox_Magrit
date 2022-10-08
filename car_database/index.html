@@ -10,7 +10,8 @@
 </head>
 <body>
     <header>
-    <div class="firstSpace"></div>
+    <hr>
+    <h1>Car Registration Service</h1>
         <form id="search">
             <h2>Search car by Licence number</h2>
             <label for="licenceSearch" id="search">Licence number</label>
@@ -19,8 +20,8 @@
                 <p id="searchResult"></p>
         </form>
     </header>
-    <div class="secondSpace"></div>
     <main>
+        <hr>
         <form id="data">
             <h2>Insert Car data</h2>
             <label for="licenceData">Licence number</label>
@@ -36,14 +37,16 @@
             <label for="color">Car color</label>
                 <input type="text" id="color" name="InstData"/>
             <input type="submit" value="Add car"/>
-            <input type="reset"/>
         </form>
+        <div></div>
         <div class="database">
             <h2>Cars database</h2>
-            <p id="dataDisplay"></p>
+            <div id="dataDisplay"></div>
         </div>
     </main>
-    <footer class="thirdSpace"></footer>
+    <button id="reset" value="Reset">Reset Database</button>
+
+    
     <script src="script.js"></script>
     
 </body>

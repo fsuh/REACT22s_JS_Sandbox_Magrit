@@ -99,6 +99,7 @@ input[type=submit]:hover{
     border: 1px solid gray;
     background-color: lightslategray;
     opacity: 0.8;
+    text-align: center;
 
 }
 
