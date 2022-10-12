@@ -85,24 +85,9 @@ const registerCar = (event) => {
         table.appendChild(newRow);
 
     });
+    dataDisplay.innerHTML='';
     dataDisplay.appendChild(table);
-
-    /*dataDisplay.innerHTML = ' <table id="carDatabase"><thead><th>Licence</th><th>Maker</th><th>Model</th><th>Owner</th><th>Price</th><th>Color</th></thead><tbody></tbody></table>'
- 
-  const tableRef = document.querySelector('#carDatabase');
-        let newRows = tableRef.insertRow(-1);
-        let licenceCell = newRows.insertCell();
-        let makerCell = newRows.insertCell();
-        let modelCell = newRows.insertCell();
-        let ownerCell = newRows.insertCell();
-        let priceCell = newRows.insertCell();
-        let colorCell = newRows.insertCell();
-        licenceCell.innerHTML = licenseNum;
-        makerCell.innerHTML = makerNum;
-        modelCell.innerHTML = modelNum;
-        ownerCell.innerHTML = ownerNum;
-        priceCell.innerHTML = priceNum;
-        colorCell.innerHTML = colorNum;*/
+    
         form2.reset();
     
 
